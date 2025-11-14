@@ -1,0 +1,127 @@
+/* General footer styling to match the screenshot */
+.site-footer {
+   background: linear-gradient(180deg, #3A3567 0%, #19172C 100%);
+    /* Solid dark purple background */
+    color: #BDC0D3;
+    /* Default light text color for the section */
+    padding: 80px 5% 40px;
+    /* Adjusted padding for top and bottom */
+    font-family: sans-serif;
+    /* A standard clean font */
+}
+
+/* Container for the footer columns */
+.footer-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 26px;
+}
+
+/* Styling for each column in the footer */
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+}
+
+/* Styling for column titles (H3) */
+.footer-column h3 {
+    color: #FFFFFF;
+    font-size: 1.1rem;
+    font-weight: 700;
+    /* Bolder font weight to match screenshot */
+    margin-bottom: 25px;
+    /* Increased margin for more space */
+}
+
+/* Specific styling for the 'About Us' paragraph */
+.footer-column.about-us p {
+    line-height: 1.7;
+    max-width: 280px;
+    color: #BDC0D3;
+    /* Ensuring the paragraph text color is correct */
+}
+
+/* Styling for the link lists */
+.footer-column.links ul {
+    padding: 0;
+    list-style: none;
+}
+
+.footer-column.links li {
+    margin-bottom: 12px;
+}
+
+/* Styling for the links */
+.footer-column.links a {
+    color: #BDC0D3;
+    /* Lighter text color for links */
+    text-decoration: none;
+    /* Remove underline from links */
+    transition: color 0.3s ease;
+}
+
+.footer-column.links a:hover {
+    color: #FFFFFF;
+    /* Links turn white on hover */
+}
+
+/* Container for social media icons */
+.social-icons {
+    display: flex;
+    gap: 10px;
+    /* Reduced gap for a tighter look */
+}
+
+/* Styling for individual social media icon links to match the outlined style */
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    background-color: transparent;
+    /* No background color */
+    color: #BDC0D3;
+    /* Icon color matches the text */
+    border: 1px solid #BDC0D3;
+    /* Added border */
+    border-radius: 6px;
+    /* Rounded-square border */
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect for social icons */
+.social-icons a:hover {
+    color: #FFFFFF;
+    border-color: #FFFFFF;
+    background-color: transparent;
+    /* Ensure no background on hover */
+    transform: none;
+    /* Removed the previous transform effect */
+}
+
+/* New styles for the bottom section of the footer */
+.footer-bottom {
+    margin-top: 60px;
+    /* Space between columns and the divider line */
+}
+
+.footer-divider {
+    border: none;
+    height: 1px;
+    background-color: rgba(189, 192, 211, 0.2);
+    /* Faint, translucent divider line */
+    margin-bottom: 30px;
+}
+
+.copyright-text {
+    text-align: center;
+    color: #a0aec0;
+    /* Using a slightly darker grey for the copyright text */
+    font-size: 0.9rem;
+}

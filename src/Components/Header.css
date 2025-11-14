@@ -1,0 +1,54 @@
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #0000001a;
+    padding: 1rem 5%;
+    transition: background-color 0.3s ease;
+    backdrop-filter: blur(18px);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.main-nav ul {
+    display: flex;
+    gap: 2.5rem;
+}
+
+.main-nav a {
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+    color: #e83a9c;
+}
+
+.login-btn {
+    background-color: #64E1D1;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 50px;
+    padding: 12px 30px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.login-btn:hover {
+    transform: scale(1.05);
+}

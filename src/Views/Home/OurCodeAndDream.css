@@ -1,0 +1,193 @@
+/* Using a common font that looks similar to the screenshot */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap');
+
+.ocad-section {
+    background-size: cover;
+    background-position: center;
+    padding: 7rem 2rem;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+    /* This is key to hide parts of overflowing elements */
+    position: relative;
+}
+
+.ocad-container {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    width: 95%;
+    margin-left: auto;
+}
+
+/* --- Left Column --- */
+.ocad-left-column {
+    flex: 1;
+    max-width: 420px;
+    position: relative;
+}
+
+.ocad-title {
+    line-height: 58px;
+    /* margin: 0 0 1.5rem 0; */
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    font-weight: 700;
+    letter-spacing: 5%;
+    font-size: 48px;
+}
+
+.ocad-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    opacity: 0.9;
+    /* Slightly transparent text */
+    margin: 0;
+}
+
+/* --- Right Column --- */
+.ocad-right-column {
+    flex: 2;
+    display: flex;
+    align-items: end;
+    gap: 1.25rem;
+    position: relative;
+    width: 55%;
+}
+
+.ocad-main-image-wrapper {
+    position: relative;
+    /* flex-shrink: 0 is important so it doesn't shrink when the container is tight */
+    flex-shrink: 0;
+}
+
+.ocad-main-image {
+    display: block;
+    width: 450px;
+    height: auto;
+    border: 4px solid white;
+    border-radius: 24px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.ocad-thumbnail {
+    display: block;
+    height: 140px;
+    border: 3px solid white;
+    border-radius: 20px;
+    flex-shrink: 0;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    width: 200px;
+    min-width: 200px;
+    height: 174px;
+}
+
+.ocad-thumbnail-tall {
+    height: 180px;
+    /* Taller for the last image */
+}
+
+/* --- Pagination Dots --- */
+.ocad-pagination {
+    position: absolute;
+    bottom: -40px;
+    /* Position below the main image */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.ocad-dot {
+    width: 12px;
+    height: 12px;
+    border: 2px solid white;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.ocad-dot-active {
+    background-color: white;
+}
+
+/* --- Decorative Elements --- */
+.ocad-left-decorations {
+    position: absolute;
+    bottom: -60px;
+    left: 0;
+}
+
+.ocad-plus-icon {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.ocad-left-square {
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    margin-top: 10px;
+}
+
+.ocad-right-square {
+    position: absolute;
+    top: 0;
+    right: 15%;
+    /* Position relative to the right column */
+    width: 30px;
+    height: 30px;
+    border: 3px solid #E5358A;
+    /* Pink/Magenta color from screenshot */
+    border-radius: 4px;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 1200px) {
+    .ocad-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 5rem;
+    }
+
+    .ocad-right-column {
+        justify-content: center;
+    }
+
+    .ocad-left-decorations {
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .ocad-left-square {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .ocad-title {
+        font-size: 2.5rem;
+    }
+
+    .ocad-right-column {
+        /* Allow images to wrap on smaller screens */
+        flex-wrap: wrap;
+    }
+
+    .ocad-main-image {
+        width: 100%;
+    }
+
+    .ocad-thumbnail {
+        height: 100px;
+    }
+
+    .ocad-thumbnail-tall {
+        height: 130px;
+    }
+}

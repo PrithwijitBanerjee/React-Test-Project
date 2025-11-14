@@ -1,0 +1,240 @@
+/* Main Wrapper & Font */
+.testimonial_wrapper {
+    width: 100%;
+    padding: 80px 20px;
+    background-color: #F9F9FF;
+    /* Light background from screenshot */
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+    /* Prevents horizontal scroll on small screens */
+}
+
+/* Header Section */
+.testimonial_header {
+    text-align: center;
+    margin-bottom: 80px;
+    /* Increased spacing */
+}
+
+.testimonial_header h2 {
+    font-weight: 700;
+    color: #3A3567;
+    margin: 0 0 15px 0;
+    font-size: 48px;
+    line-height: 58px;
+}
+
+.testimonial_header p {
+    font-size: 1.1rem;
+    color: #8D8D8D;
+    margin: 0;
+}
+
+/* Grid for Cards */
+.testimonials_grid {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    /* Spacing between cards */
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1300px;
+    /* Widen the container to fit cards + gaps */
+}
+
+/* --- Individual Card Styling --- */
+
+/* 
+  NEW APPROACH:
+  The card is now a relative container that holds three layers:
+  1. The border image (bottom layer, z-index: 1)
+  2. The content (middle layer, z-index: 2)
+  3. The profile picture (top layer, z-index: 3)
+*/
+.testimonial_card {
+    position: relative;
+    width: 380px;
+    /* Adjust to match your border image aspect ratio */
+    height: 480px;
+    /* Adjust to match your border image aspect ratio */
+    box-sizing: border-box;
+}
+
+/* The image containing the dotted border and quotes */
+.card_border_image {
+    position: absolute;
+    top: 25px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+/* Profile Picture Styling */
+.profile_pic {
+    width: 150px;
+    height: 120px;
+    border-radius: 20px;
+    /* "Squircle" shape */
+    object-fit: cover;
+    position: absolute;
+    top: -30px;
+    right: 25px;
+    border: 6px solid;
+    /* Border color will be set by variant classes */
+    background-color: #fff;
+    /* Hides the dotted line behind the image */
+    z-index: 3;
+    border: none
+}
+
+/* Content inside the card */
+.card_content {
+    position: relative;
+    z-index: 2;
+    /* Sits above the border image */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Padding to position content inside the border image's frame */
+    padding: 70px 40px 80px 40px;
+    box-sizing: border-box;
+}
+
+/* Star Rating */
+.rating_stars {
+    margin-bottom: 15px;
+}
+
+.star {
+    font-size: 1.4rem;
+    color: #dcdcdc;
+    margin-right: 2px;
+}
+
+.star.filled {
+    color: #ffc107;
+}
+
+/* Text & Author Styles */
+.testimonial_text {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #5a5a5a;
+    margin: 0;
+    /* This will take up available space, pushing author to bottom */
+    flex-grow: 1;
+}
+
+.author_info {
+    margin-top: 25px;
+}
+
+.author_name {
+    font-weight: 700;
+    color: #333;
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.author_role {
+    font-size: 0.9rem;
+    color: #777;
+    margin: 5px 0 0 0;
+}
+
+/* --- Color Variants --- */
+/* These classes now only color the profile picture border */
+.card-pink .profile_pic {
+    border-color: #F8DAE9;
+    /* Light pink/lilac */
+}
+
+.card-cyan .profile_pic {
+    border-color: #D7F0F7;
+    /* Light cyan */
+}
+
+.card-red .profile_pic {
+    border-color: #FCE1E1;
+    /* Light peachy-red */
+}
+
+
+/* Pagination Dots */
+/* .pagination_dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 60px;
+} */
+
+.pagination_dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 40px;
+    /* Reduced from 60px to prevent overlap */
+    position: relative;
+    /* Ensure proper stacking */
+    z-index: 10;
+    /* Higher z-index to appear above cards */
+    width: 100%;
+    color: #3A3567 !important;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    /* background-color: #c9baba; */
+    background-color: #3A3567 !important;
+
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.dot.active {
+    width: 30px;
+    background-color: #3A3567;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1280px) {
+    .testimonials_grid {
+        gap: 40px;
+    }
+
+    .testimonial_card {
+        width: 340px;
+        height: 430px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .testimonial_header h2 {
+        font-size: 2.5rem;
+    }
+
+    .testimonials_grid {
+        gap: 80px;
+        /* Increase gap for stacked cards */
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .testimonial_card {
+        width: 90%;
+        max-width: 380px;
+        height: auto;
+        /* Let height be determined by content on mobile */
+        aspect-ratio: 380 / 480;
+        /* Maintain aspect ratio */
+    }
+}

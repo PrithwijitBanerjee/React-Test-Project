@@ -1,0 +1,329 @@
+/* --- Base Styles & Fonts --- */
+.courses-section {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* --- Header Section --- */
+.courses-header {
+    margin-bottom: 50px;
+}
+
+.courses-header h2 {
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    font-size: 3rem;
+    color: #3D3B8E;
+    line-height: 1.2;
+    margin: 0 0 24px 0;
+}
+
+.courses-header p {
+    max-width: 650px;
+    margin: 0 auto;
+    color: #6A717C;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* --- Courses Card Container --- */
+.courses-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    /* Makes cards equal height */
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+/* --- Individual Course Card --- */
+.course-card {
+    border-radius: 24px;
+    padding: 40px 30px;
+    text-align: center;
+    width: 30%;
+    /* max-width: 350px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.course-logo {
+    width: 102px;
+    height: 37px;
+    margin-bottom: 25px;
+    object-fit: contain;
+}
+
+.course-card h3 {
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    font-size: 1.5rem;
+    color: #3D3B8E;
+    margin: 0 0 15px 0;
+}
+
+.course-card p {
+    color: #4A4A4A;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* --- Card Gradients --- */
+.card-gradient-1 {
+    background: linear-gradient(to bottom, #FAD9FF, #D9E7FF);
+}
+
+.card-gradient-2 {
+    background: linear-gradient(to bottom, #D9F8FF, #E5FFE9);
+}
+
+.card-gradient-3 {
+    background: linear-gradient(to bottom, #FFEEEA, #FFECF7);
+}
+
+/* --- Pagination Controls --- */
+.pagination-controls {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.pagination-dots {
+    display: flex;
+    gap: 8px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #D9D9D9;
+}
+
+.dot.active {
+    background-color: #3D3B8E;
+}
+
+.pagination-counter {
+    background-color: #252525;
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 15px;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 1200px) {
+    .course-card {
+        max-width: 320px;
+    }
+}
+
+@media (max-width: 768px) {
+    .courses-header h2 {
+        font-size: 2.5rem;
+    }
+
+    .courses-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* --- Slider Container --- */
+.courses-slider-container {
+    position: relative;
+    width: 100%;
+}
+
+/* --- Slider Navigation Arrows --- */
+.slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #3D3B8E;
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.slider-arrow:hover {
+    background: #2a2870;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.slider-arrow-prev {
+    left: 10px;
+}
+
+.slider-arrow-next {
+    right: 10px;
+}
+
+/* --- Mobile-specific slider styles --- */
+@media (max-width: 768px) {
+    .courses-container {
+        transition: transform 0.3s ease-in-out;
+    }
+    
+    .course-card {
+        width: 100%;
+        max-width: 350px;
+        margin: 0 auto;
+    }
+}
+
+/* --- Desktop: maintain original layout --- */
+@media (min-width: 769px) {
+    .slider-arrow {
+        display: none;
+    }
+    
+    .courses-slider-container {
+        display: block;
+    }
+}
+
+/* --- Existing styles remain unchanged --- */
+.courses-section {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.courses-header {
+    margin-bottom: 50px;
+}
+
+.courses-header h2 {
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    font-size: 3rem;
+    color: #3D3B8E;
+    line-height: 1.2;
+    margin: 0 0 24px 0;
+}
+
+.courses-header p {
+    max-width: 650px;
+    margin: 0 auto;
+    color: #6A717C;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.courses-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.course-card {
+    border-radius: 24px;
+    padding: 40px 30px;
+    text-align: center;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.course-logo {
+    width: 102px;
+    height: 37px;
+    margin-bottom: 25px;
+    object-fit: contain;
+}
+
+.course-card h3 {
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    font-size: 1.5rem;
+    color: #3D3B8E;
+    margin: 0 0 15px 0;
+}
+
+.course-card p {
+    color: #4A4A4A;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.card-gradient-1 {
+    background: linear-gradient(to bottom, #FAD9FF, #D9E7FF);
+}
+
+.card-gradient-2 {
+    background: linear-gradient(to bottom, #D9F8FF, #E5FFE9);
+}
+
+.card-gradient-3 {
+    background: linear-gradient(to bottom, #FFEEEA, #FFECF7);
+}
+
+.pagination-controls {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.pagination-dots {
+    display: flex;
+    gap: 8px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #D9D9D9;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: #3D3B8E;
+}
+
+.pagination-counter {
+    background-color: #252525;
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 15px;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+@media (max-width: 1200px) {
+    .course-card {
+        max-width: 320px;
+    }
+}
+
+@media (max-width: 768px) {
+    .courses-header h2 {
+        font-size: 2.5rem;
+    }
+}
