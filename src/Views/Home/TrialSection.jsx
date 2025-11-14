@@ -2,7 +2,7 @@ import React from 'react'
 import './Home.css';
 // IMPORTANT: Make sure this path points to the correct envelope image, not the avatar group.
 // I've used 'trial-envelope.png' as a placeholder for the correct filename.
-import trialEnvelope from '../../assets/visual.png';
+import trialEnvelope from '../../assets/Visual.png';
 
 
 const TrialSection = () => {
